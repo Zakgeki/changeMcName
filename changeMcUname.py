@@ -46,12 +46,11 @@ def change_account_name(email, password, new_username):
     # if the clients name can be changed, change the name. Else, ask for new
     # account information and try again. 
     if client.get_name_change_info():
-        # data = client.change_username(new_username)
-        # if not data["success"]:
-            # print(data["error"])
-        # elif data["success"]:
-            # print(f"Username successfully changed from {current_username} to {new_username}!")
-        print("You did it!")
+        data = client.change_username(new_username)
+        if not data["success"]:
+            print(data["error"])
+        elif data["success"]:
+            print(f"Username successfully changed from {current_username} to {new_username}!")
     else:
         print("This account can't have it's name changed. Provide a new account.")
         email = ask_for_email()
