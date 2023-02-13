@@ -24,7 +24,7 @@ from mojang import API, Client
 
 def main():
     # The new Minecraft username you want to use
-    usernames = ["TylerSnow", "TaylorSnow", "GodTyler", "aoeusth"]
+    usernames = [ "list", "of", "usernames" ]
     email = ask_for_email()
     password = ask_for_password()
     # using mojangs api, check if the username is availablejjj
